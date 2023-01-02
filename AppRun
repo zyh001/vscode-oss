@@ -1,0 +1,6 @@
+#!/bin/sh
+VSCODE_PATH="${APPDIR}/usr/share/code-oss"
+ELECTRON="$VSCODE_PATH/code-oss"
+CLI="$VSCODE_PATH/resources/app/out/cli.js"
+env GDK_BACKEND=x11 "$ELECTRON" "$CLI" "$@"
+exit $?
